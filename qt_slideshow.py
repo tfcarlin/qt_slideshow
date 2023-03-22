@@ -12,9 +12,9 @@ from pillow_heif import register_heif_opener
 register_heif_opener()
  
 SUPPORTED_EXTENSIONS = (".png", ".jpg", ".bmp", ".gif",".heic", ".HEIC")
+# These are used to retrieve the current temp from HomeAssistant. Remove get_temp()
 API_KEY = ''
-TEMP_URL = "http://homeassistant.carlin.com:8123/api/states/sensor.lumi_lumi_weather_temperature"
-
+TEMP_URL = ''
 #PATH = Path(r'/Users/user/Documents') #Example path on macos
 PATH = Path(r"Z:") #Windows path...for reasons I don't understand it shouldn't end in a final back slash
 
