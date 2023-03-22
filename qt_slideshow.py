@@ -13,7 +13,7 @@ from pillow_heif import register_heif_opener
 register_heif_opener()
  
 SUPPORTED_EXTENSIONS = (".png", ".jpg", ".bmp", ".gif",".heic", ".HEIC")
-API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiZGQ1YWEwZTEwMGM0ODlkOGYyMzYxYmU4YWE1ZmUxZiIsImlhdCI6MTY3ODA1MTIyMCwiZXhwIjoxOTkzNDExMjIwfQ.piRT2fT6k-vReKEHf5hTq35dpFCpp8c0ro-6V0qoSiA'
+API_KEY = ''
 TEMP_URL = "http://homeassistant.carlin.com:8123/api/states/sensor.lumi_lumi_weather_temperature"
 
 
