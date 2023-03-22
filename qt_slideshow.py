@@ -8,23 +8,15 @@ from PySide6.QtWidgets import QApplication, QWidget, QLabel
 from PySide6.QtGui import QPixmap
 from PIL import Image, ImageQt
 from pillow_heif import register_heif_opener
-#import pillow_heif
 
 register_heif_opener()
  
 SUPPORTED_EXTENSIONS = (".png", ".jpg", ".bmp", ".gif",".heic", ".HEIC")
-API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiZGQ1YWEwZTEwMGM0ODlkOGYyMzYxYmU4YWE1ZmUxZiIsImlhdCI6MTY3ODA1MTIyMCwiZXhwIjoxOTkzNDExMjIwfQ.piRT2fT6k-vReKEHf5hTq35dpFCpp8c0ro-6V0qoSiA'
+API_KEY = ''
 TEMP_URL = "http://homeassistant.carlin.com:8123/api/states/sensor.lumi_lumi_weather_temperature"
 
-
-#PATH = Path(r"C:\Users\tim\Documents")
-#PATH = Path(r'/Users/tcarlin/Documents')
-#PATH = Path(r'/Volumes/Images/ImagesNotShared/TFC/IOS/104APPLE'
-#PATH = Path(r"Z:\\General\\Images\\ImagesShared\\Frame")
-#PATH = Path(r"Z:\General\Images\ImagesNotShared\TFC\IOS\one"
-#PATH = Path(r'C:\\Users\\tim\\Documents'
-PATH = Path(r"Z:")
-#PATH = Path(r'/mnt/14TB/General/Images/ImagesNotShared/TFC/IOS/104APPLE'
+#PATH = Path(r'/Users/user/Documents') #Example path on macos
+PATH = Path(r"Z:") #Windows path...for reasons I don't understand it shouldn't end in a final back slash
 
 class Slideshow(QWidget):
     """Get a list of files and show them in a 1080p window"""
