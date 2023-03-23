@@ -95,6 +95,7 @@ class Slideshow(QWidget):
         pimage = Image.open(file)
         qimage = ImageQt.ImageQt(pimage)
         self.qpixmap = QPixmap.fromImage(qimage).scaled(1920, 1080, Qt.AspectRatioMode.KeepAspectRatio)
+        # use the following if no need for heic support
         #self.qpixmap = QPixmap(file).scaled(1920, 1080, Qt.AspectRatioMode.KeepAspectRatio)
         return self.qpixmap
 
