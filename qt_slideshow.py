@@ -1,18 +1,19 @@
 import random
 from pathlib import Path
-import requests
 import sys
+import os
+from dotenv import load_dotenv
+import requests
 from PySide6.QtCore import Qt, QTimer
 from PySide6.QtGui import QFont, QPixmap
 from PySide6.QtWidgets import QApplication, QWidget, QLabel
 from PySide6.QtGui import QPixmap
 from PIL import Image, ImageQt
 from pillow_heif import register_heif_opener
-from dotenv import load_dotenv
-import os
 
 load_dotenv()
 
+# this is used to read heic files from iPhone; the program would be simpler w/o this support
 register_heif_opener()
  
 SUPPORTED_EXTENSIONS = (".png", ".jpg", ".bmp", ".gif",".heic", ".HEIC")
@@ -69,9 +70,9 @@ class Slideshow(QWidget):
         self.pause_timer.start(1000)
 
     def show_pause(self):
+        """Flip the state of the paused variable"""
         if self.paused:
             self.paused_label.show()
-            print('show pause')
         else:
             self.paused_label.hide()
 
