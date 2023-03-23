@@ -8,13 +8,21 @@ from PySide6.QtWidgets import QApplication, QWidget, QLabel
 from PySide6.QtGui import QPixmap
 from PIL import Image, ImageQt
 from pillow_heif import register_heif_opener
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 register_heif_opener()
  
 SUPPORTED_EXTENSIONS = (".png", ".jpg", ".bmp", ".gif",".heic", ".HEIC")
 # These are used to retrieve the current temp from HomeAssistant. Remove get_temp()
-API_KEY = ''
-TEMP_URL = ''
+#API_KEY = ''
+#TEMP_URL = ''
+
+apiKey = os.getenv('API_KEY')
+apiKey = os.getenv('TEMP_URL')
+
 #PATH = Path(r'/Users/user/Documents') #Example path on macos
 PATH = Path(r"Z:") #Windows path...for reasons I don't understand it shouldn't end in a final back slash
 
