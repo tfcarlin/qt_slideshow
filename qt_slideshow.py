@@ -17,14 +17,11 @@ register_heif_opener()
  
 SUPPORTED_EXTENSIONS = (".png", ".jpg", ".bmp", ".gif",".heic", ".HEIC")
 # These are used to retrieve the current temp from HomeAssistant. Remove get_temp()
-#API_KEY = ''
-#TEMP_URL = ''
-
-apiKey = os.getenv('API_KEY')
-apiKey = os.getenv('TEMP_URL')
+API_KEY = os.getenv('API_KEY')
+TEMP_URL = os.getenv('TEMP_URL')
 
 #PATH = Path(r'/Users/user/Documents') #Example path on macos
-PATH = Path(r"Z:") #Windows path...for reasons I don't understand it shouldn't end in a final back slash
+PATH = Path(r"Z:\General\Images\ImagesShared\Frame") #Windows path...for reasons I don't understand it shouldn't end in a final back slash
 
 class Slideshow(QWidget):
     """Get a list of files and show them in a 1080p window"""
